@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Register</title>
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-md p-8 rounded-2xl shadow-lg bg-black/80 border border-accent">
+    <h2 class="text-2xl font-bold text-accent mb-6 text-center">Welcome</h2>
+    
+    <!-- Tabs -->
+    <div class="flex justify-around mb-6">
+      <button id="loginTab" class="tab-btn text-accent font-semibold">Login</button>
+      <button id="registerTab" class="tab-btn text-gray-400 hover:text-accent">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="space-y-4">
+      <input type="email" placeholder="Email" class="w-full p-3 rounded-lg bg-dark border border-accent focus:outline-none focus:ring-2 focus:ring-accent">
+      <input type="password" placeholder="Password" class="w-full p-3 rounded-lg bg-dark border border-accent focus:outline-none focus:ring-2 focus:ring-accent">
+      <button class="w-full bg-accent text-dark font-bold py-3 rounded-lg hover:bg-accentHover transition">Login</button>
+    </form>
+
+    <!-- Register Form (hidden initially) -->
+    <form id="registerForm" class="space-y-4 hidden">
+      <input type="text" placeholder="Username" class="w-full p-3 rounded-lg bg-dark border border-accent focus:outline-none focus:ring-2 focus:ring-accent">
+      <input type="email" placeholder="Email" class="w-full p-3 rounded-lg bg-dark border border-accent focus:outline-none focus:ring-2 focus:ring-accent">
+      <input type="password" placeholder="Password" class="w-full p-3 rounded-lg bg-dark border border-accent focus:outline-none focus:ring-2 focus:ring-accent">
+      <button class="w-full bg-accent text-dark font-bold py-3 rounded-lg hover:bg-accentHover transition">Register</button>
+    </form>
+  </div>
+
+  <script>
+    const loginTab = document.getElementById("loginTab");
+    const registerTab = document.getElementById("registerTab");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    loginTab.addEventListener("click", () => {
+      loginForm.classList.remove("hidden");
+      registerForm.classList.add("hidden");
+      loginTab.classList.add("text-accent");
+      loginTab.classList.remove("text-gray-400");
+      registerTab.classList.add("text-gray-400");
+      registerTab.classList.remove("text-accent");
+    });
+
+    registerTab.addEventListener("click", () => {
+      loginForm.classList.add("hidden");
+      registerForm.classList.remove("hidden");
+      registerTab.classList.add("text-accent");
+      registerTab.classList.remove("text-gray-400");
+      loginTab.classList.add("text-gray-400");
+      loginTab.classList.remove("text-accent");
+    });
+  </script>
+</body>
+</html>
