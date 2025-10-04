@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: "#0a0a0a",       // black background
+        dark: "#0a0a0a",       //Black background
         accent: "#FFD700",     // dark yellow / golden
         accentHover: "#E6C200" // darker shade for hover
       },

@@ -4,7 +4,7 @@ TailwindCSS Beginner’s Toolkit 🌟
 This project is a beginner-friendly capstone designed to demonstrate how to set up, configure, and use TailwindCSS in a real workflow.
 It serves as a quickstart guide for students and developers who want to move from theory to practice.
 
-🎯 Objectives
+🎯objectives
 
 Learn how to initialize a TailwindCSS project.
 
